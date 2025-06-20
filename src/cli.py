@@ -12,7 +12,9 @@ def cli():
 @click.option('--output-html', default='output.html')
 def build(input_file, output_html):
     resume_data = parse_resume_file(input_file)
+    print(resume_data)
     html = render_html(resume_data)
+    print(html)
     with open(output_html, 'w', encoding='utf-8') as f:
         f.write(html)
     click.echo(f'HTML resume saved to {output_html}')
