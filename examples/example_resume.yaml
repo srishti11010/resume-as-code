@@ -4,6 +4,9 @@ basics:
   email: jane.doe@example.com
   phone: "+1 (555) 123-4567"
   website: https://janedoe.dev
+  address: 123 Broadway Ave, Apt 5B, New York, NY 10001
+  github: github.com/xyz
+  linkedin: linkedin.com/xyz
   summary: >
     Passionate software engineer with 5+ years of experience in full-stack development,
     specializing in Python and JavaScript.
@@ -12,7 +15,7 @@ work:
   - company: Tech Solutions Inc.
     position: Senior Software Engineer
     website: https://techsolutions.example.com
-    startDate: 2020-06
+    startDate: 2021-06
     endDate: Present
     summary: >
       Leading a team of developers building scalable web applications.
@@ -22,21 +25,38 @@ work:
 
   - company: WebWorks
     position: Software Engineer
-    startDate: 2017-01
-    endDate: 2020-05
+    startDate: 2018-07
+    endDate: 2021-05
     summary: >
       Contributed to front-end and back-end web development projects.
     highlights:
       - Built reusable React components increasing front-end efficiency.
       - Integrated third-party APIs to enhance user experience.
 
+  - company: ByteForge
+    position: Junior Software Developer
+    startDate: 2016-07
+    endDate: 2018-08
+    summary: >
+      Assisted in building internal tools and maintained legacy systems.
+    highlights:
+      - Wrote unit and integration tests to improve code reliability.
+      - Supported data migration projects during system upgrades.
+
 education:
-  - institution: State University
+  - institution: University of California, Berkeley
     area: Computer Science
     degree: Bachelor of Science
     startDate: 2012-09
     endDate: 2016-06
     gpa: 3.8
+
+  - institution: University of Washington
+    area: Computer Science
+    degree: Master of Science
+    startDate: 2016-09
+    endDate: 2018-06
+    gpa: 3.9
 
 skills:
   - name: Programming Languages
@@ -63,4 +83,3 @@ projects:
 languages:
   - language: English
     fluency: Native
-

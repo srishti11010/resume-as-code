@@ -9,28 +9,49 @@
 
 <body>
 
-  <header>
-    <h1>{{ basics.name }}</h1>
-    <p><strong>{{ basics.label }}</strong></p>
-    <p>
-      <i class="fas fa-envelope"></i>
-      Email: <a href="mailto:{{ basics.email }}">{{ basics.email }}</a> &nbsp; | &nbsp;
-      <i class="fas fa-phone"></i>
-      Phone: {{ basics.phone }}
-    </p>
-    <p>
-      <i class="fas fa-globe"></i>
-      Website: <a href="{{ basics.website }}" target="_blank">{{ basics.website }}</a>
-    </p>
-    <p>{{ basics.summary }}</p>
-  </header>
+<header>
+  <h1>{{ basics.name }}</h1>
+  <p><strong>{{ basics.label }}</strong></p>
+
+  <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
+    &nbsp; | &nbsp;
+    <i class="fas fa-phone"></i>
+    {{ basics.phone }}
+  </p>
+
+  <p>
+    <i class="fas fa-globe"></i>
+    <a href="{{ basics.website }}" target="_blank">{{ basics.website }}</a>
+    {% if basics.github %}
+    &nbsp; | &nbsp;
+    <i class="fab fa-github"></i>
+    <a href="https://{{ basics.github }}" target="_blank">{{ basics.github }}</a>
+    {% endif %}
+    {% if basics.linkedin %}
+    &nbsp; | &nbsp;
+    <i class="fab fa-linkedin"></i>
+    <a href="https://{{ basics.linkedin }}" target="_blank">{{ basics.linkedin }}</a>
+    {% endif %}
+  </p>
+
+  <p>
+    <i class="fas fa-location-dot"></i>
+    {{ basics.address }}
+  </p>
+
+  <p>{{ basics.summary }}</p>
+</header>
+
 
   <section>
     <h2>Work Experience</h2>
     {% for job in work %}
     <div>
-      <h3>{{ job.position }} — <a href="{{ job.website or '#' }}" target="_blank">{{ job.company }}</a></h3>
-      <p><em>{{ job.startDate }} - {{ job.endDate or 'Present' }}</em></p>
+      <h3>{{ job.position }} — <a href="{{ job.website or '#' }}" target="_blank">{{ job.company }}</a>
+      <span class="tenure"><em>{{ job.startDate }} - {{ job.endDate or 'Present' }}</em></span>
+      </h3>
       <p>{{ job.summary }}</p>
       {% if job.highlights %}
       <ul>
@@ -47,8 +68,10 @@
     <h2>Education</h2>
     {% for edu in education %}
     <div>
-      <h3>{{ edu.degree }} in {{ edu.area }}</h3>
-      <p>{{ edu.institution }} | <em>{{ edu.startDate }} - {{ edu.endDate }}</em></p>
+      <h3>{{ edu.degree }} in {{ edu.area }}
+      <span class="tenure"><em>{{ edu.startDate }} - {{ edu.endDate }}</em></span>
+      </h3>
+      <p>{{ edu.institution }}</p>
       {% if edu.gpa %}
       <p>GPA: {{ edu.gpa }}</p>
       {% endif %}
