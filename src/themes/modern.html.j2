@@ -9,21 +9,41 @@
 
 <body>
 
-  <header>
-    <h1>{{ basics.name }}</h1>
-    <p><strong>{{ basics.label }}</strong></p>
-    <p>
-      <i class="fas fa-envelope"></i>
-      Email: <a href="mailto:{{ basics.email }}">{{ basics.email }}</a> &nbsp; | &nbsp;
-      <i class="fas fa-phone"></i>
-      Phone: {{ basics.phone }}
-    </p>
-    <p>
-      <i class="fas fa-globe"></i>
-      Website: <a href="{{ basics.website }}" target="_blank">{{ basics.website }}</a>
-    </p>
-    <p>{{ basics.summary }}</p>
-  </header>
+<header>
+  <h1>{{ basics.name }}</h1>
+  <p><strong>{{ basics.label }}</strong></p>
+
+  <p>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
+    &nbsp; | &nbsp;
+    <i class="fas fa-phone"></i>
+    {{ basics.phone }}
+  </p>
+
+  <p>
+    <i class="fas fa-globe"></i>
+    <a href="{{ basics.website }}" target="_blank">{{ basics.website }}</a>
+    {% if basics.github %}
+    &nbsp; | &nbsp;
+    <i class="fab fa-github"></i>
+    <a href="https://{{ basics.github }}" target="_blank">{{ basics.github }}</a>
+    {% endif %}
+    {% if basics.linkedin %}
+    &nbsp; | &nbsp;
+    <i class="fab fa-linkedin"></i>
+    <a href="https://{{ basics.linkedin }}" target="_blank">{{ basics.linkedin }}</a>
+    {% endif %}
+  </p>
+
+  <p>
+    <i class="fas fa-location-dot"></i>
+    {{ basics.address }}
+  </p>
+
+  <p>{{ basics.summary }}</p>
+</header>
+
 
   <section>
     <h2>Work Experience</h2>
