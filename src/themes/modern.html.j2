@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ resume.name }} - Resume</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 2rem; }
+    h1 { border-bottom: 2px solid #333; }
+    section { margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>{{ resume.name }}</h1>
+  {% if resume.title %}<p><em>{{ resume.title }}</em></p>{% endif %}
+  {% if resume.contact_email %}<p>Email: {{ resume.contact_email }}</p>{% endif %}
+  {% if resume.github %}<p>GitHub: {{ resume.github }}</p>{% endif %}
+  {% if resume.website %}<p>Website: {{ resume.website }}</p>{% endif %}
+
+  {% if resume.experience %}
+  <section>
+    <h2>Experience</h2>
+    <ul>
+    {% for exp in resume.experience %}
+      <li>
+        <strong>{{ exp.position }} at {{ exp.company }}</strong> ({{ exp.start }} - {{ exp.end or "Present" }})
+        <p>{{ exp.description }}</p>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if resume.skills %}
+  <section>
+    <h2>Skills</h2>
+    <p>{{ resume.skills | join(', ') }}</p>
+  </section>
+  {% endif %}
+</body>
+</html>
