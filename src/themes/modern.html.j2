@@ -49,8 +49,9 @@
     <h2>Work Experience</h2>
     {% for job in work %}
     <div>
-      <h3>{{ job.position }} — <a href="{{ job.website or '#' }}" target="_blank">{{ job.company }}</a></h3>
-      <p><em>{{ job.startDate }} - {{ job.endDate or 'Present' }}</em></p>
+      <h3>{{ job.position }} — <a href="{{ job.website or '#' }}" target="_blank">{{ job.company }}</a>
+      <span class="tenure"><em>{{ job.startDate }} - {{ job.endDate or 'Present' }}</em></span>
+      </h3>
       <p>{{ job.summary }}</p>
       {% if job.highlights %}
       <ul>
@@ -67,8 +68,10 @@
     <h2>Education</h2>
     {% for edu in education %}
     <div>
-      <h3>{{ edu.degree }} in {{ edu.area }}</h3>
-      <p>{{ edu.institution }} | <em>{{ edu.startDate }} - {{ edu.endDate }}</em></p>
+      <h3>{{ edu.degree }} in {{ edu.area }}
+      <span class="tenure"><em>{{ edu.startDate }} - {{ edu.endDate }}</em></span>
+      </h3>
+      <p>{{ edu.institution }}</p>
       {% if edu.gpa %}
       <p>GPA: {{ edu.gpa }}</p>
       {% endif %}

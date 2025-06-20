@@ -25,3 +25,15 @@ body {
     vertical-align: middle;
   }
   
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .tenure {
+    margin-left: auto;
+    font-style: italic;
+    color: #666;
+    white-space: nowrap;
+  }
