@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  h1, h2, h3 {
+    color: #2c3e50;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  
+  /* Icon styling */
+  .icon {
+    margin-right: 0.4em;
+    color: #2c3e50;
+    vertical-align: middle;
+  }
+  
