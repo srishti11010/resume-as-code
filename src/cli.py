@@ -10,14 +10,16 @@ def cli():
 @cli.command()
 @click.argument('input_file')
 @click.option('--output-html', default='output.html')
-def build(input_file, output_html):
+@click.option('--output-pdf', default=None, help="Optional PDF output file")
+def build(input_file, output_html, output_pdf):
     resume_data = parse_resume_file(input_file)
-    print(resume_data)
     html = render_html(resume_data)
-    print(html)
     with open(output_html, 'w', encoding='utf-8') as f:
         f.write(html)
     click.echo(f'HTML resume saved to {output_html}')
+    if output_pdf:
+        export_pdf(html, output_pdf)
+        click.echo(f'PDF resume saved to {output_pdf}')
 
 @cli.command()
 @click.argument('input_file')
