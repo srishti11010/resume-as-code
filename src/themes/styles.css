@@ -1,93 +1,133 @@
+/* General layout */
 body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: auto;
-    padding: 1rem;
-    font-size: 11px;
-  }
-  
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  font-size: 11px;
+}
+
+/* Header */
 h1 {
-    color: #5288be;
-    text-align: center;
-  }
+  color: #5288be;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
 
 header {
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  h2, h3 {
-    color: #2c3e50;
-  }
-  
-  section {
-    margin-bottom: 2rem;
-  }
+header .contact-info,
+header .social-links {
+  margin: 0.25rem 0;
+  font-size: 11px;
+}
 
-  
-  ul {
-    margin: 0;
-    padding-left: 1.25rem;
-  }
-  
-  /* Icon styling */
-  .icon {
-    margin-right: 0.4em;
-    color: #2c3e50;
-    vertical-align: middle;
-  }
-  
-  h4 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .tenure {
-    margin-left: auto;
-    font-style: italic;
-    white-space: nowrap;
-  }
+header .contact-info span,
+header .social-links span {
+  display: inline-block;
+  margin-right: 0.4em;
+}
 
-  .section-divider {
-    display: flex;
-    align-items: center;
-    margin: 1.5em 0 1em;
-  }
-  
-  .section-divider h4 {
-    margin: 0;
-    margin-right: 0.5em;
-    white-space: nowrap;
-    font-size: 1.5em;
-    color: #5288be;
-  }
-  
-  .section-divider .line {
-    flex-grow: 1;
-    height: 2px;
-    background-color: #5288be;
-  }
+header .summary {
+  margin-top: 0.75rem;
+  font-size: 12px;
+}
 
-  .section-title {
-    font-size: 14px;    
-    color: #5288be;  
-    white-space: nowrap;
-    margin: 0;
-    margin-right: 0.7em;
-  }
+/* Headings */
+h2, h3 {
+  color: #2c3e50;
+}
 
-  header p.contact-info {
-    margin-bottom: 0.25em; /* less space after contact info */
-  }
-  
-  header p.social-links {
-    margin-top: 0;
-    margin-bottom: 1em; /* keep normal space after social links */
-  }
-  
-  header p.summary {
-    margin-top: 0;
-  }
-  
+h4 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline;
+  color: #2c3e50;
+}
 
-  
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Section headers */
+.section-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5em 0 1em;
+}
+
+.section-title {
+  font-size: 14px;
+  color: #5288be;
+  white-space: nowrap;
+  margin: 0;
+  margin-right: 0.7em;
+}
+
+.section-divider .line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #5288be;
+}
+
+/* Entries */
+.entry-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tenure {
+  font-style: italic;
+  font-size: 11px;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+/* Entry details block */
+.entry-details {
+  font-size: 11px;
+  color: #333;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Lists */
+ul {
+  margin: 0.5rem 0 0 1.25rem;
+  padding: 0;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 0.2rem;
+}
+
+/* Skills & Project Layouts */
+.skills-entry,
+.project-entry,
+.education-entry,
+.work-entry {
+  margin-bottom: 1.25rem;
+}
+
+/* Icons */
+.icon {
+  margin-right: 0.4em;
+  color: #2c3e50;
+  vertical-align: middle;
+}
+
+a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
