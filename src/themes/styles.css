@@ -3,6 +3,7 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 1rem;
+    font-size: 11px;
   }
   
 h1 {
@@ -35,7 +36,7 @@ header {
     vertical-align: middle;
   }
   
-  h3 {
+  h4 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -44,7 +45,6 @@ header {
   .tenure {
     margin-left: auto;
     font-style: italic;
-    color: #666;
     white-space: nowrap;
   }
 
@@ -54,7 +54,7 @@ header {
     margin: 1.5em 0 1em;
   }
   
-  .section-divider h2 {
+  .section-divider h4 {
     margin: 0;
     margin-right: 0.5em;
     white-space: nowrap;
@@ -66,6 +66,14 @@ header {
     flex-grow: 1;
     height: 2px;
     background-color: #5288be;
+  }
+
+  .section-title {
+    font-size: 14px;    
+    color: #5288be;  
+    white-space: nowrap;
+    margin: 0;
+    margin-right: 0.7em;
   }
 
   header p.contact-info {

@@ -1,6 +1,5 @@
 basics:
   name: Jane Doe
-  label: Software Engineer
   email: jane.doe@example.com
   phone: "+1 (555) 123-4567"
   website: https://janedoe.dev

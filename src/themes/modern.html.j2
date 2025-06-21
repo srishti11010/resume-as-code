@@ -44,14 +44,14 @@
 
   <section>
   <div class="section-divider">
-    <h2>Work Experience</h2>
+    <div class="section-title">Work Experience</div>
     <div class="line"></div>
     </div>
     {% for job in work %}
     <div>
-      <h3>{{ job.position }} — <a href="{{ job.website or '#' }}" target="_blank">{{ job.company }}</a>
+      <h4>{{ job.position }} — <a href="{{ job.website or '#' }}" target="_blank">{{ job.company }}</a>
       <span class="tenure"><em>{{ job.startDate }} - {{ job.endDate or 'Present' }}</em></span>
-      </h3>
+      </h4>
       <p>{{ job.summary }}</p>
       {% if job.highlights %}
       <ul>
@@ -66,14 +66,14 @@
 
   <section>
   <div class="section-divider">
-    <h2>Education</h2>
+    <div class="section-title">Education</div>
     <div class="line"></div>
     </div>
     {% for edu in education %}
     <div>
-      <h3>{{ edu.degree }} in {{ edu.area }}
+      <h4>{{ edu.degree }} in {{ edu.area }}
       <span class="tenure"><em>{{ edu.startDate }} - {{ edu.endDate }}</em></span>
-      </h3>
+      </h4>
       <p>{{ edu.institution }}</p>
       {% if edu.gpa %}
       <p>GPA: {{ edu.gpa }}</p>
@@ -84,12 +84,12 @@
 
   <section>
   <div class="section-divider">
-    <h2>Skills</h2>
+    <div class="section-title">Skills</div>
     <div class="line"></div>
     </div>
     {% for skill_group in skills %}
     <div>
-      <h3>{{ skill_group.name }}</h3>
+      <h4>{{ skill_group.name }}</h4>
       <p>{{ skill_group.keywords | join(', ') }}</p>
     </div>
     {% endfor %}
@@ -97,12 +97,12 @@
 
   <section>
   <div class="section-divider">
-    <h2>Projects</h2>
+    <div class="section-title">Projects</div>
     <div class="line"></div>
     </div>
     {% for project in projects %}
     <div>
-      <h3><a href="{{ project.url }}" target="_blank">{{ project.name }}</a></h3>
+      <h4><a href="{{ project.url }}" target="_blank">{{ project.name }}</a></h4>
       <p>{{ project.description }}</p>
     </div>
     {% endfor %}
@@ -110,7 +110,7 @@
 
   <section>
   <div class="section-divider">
-    <h2>Languages</h2>
+    <div class="section-title">Languages</div>
     <div class="line"></div>
     </div>
     <ul>
