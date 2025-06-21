@@ -3,15 +3,26 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 1rem;
+    font-size: 11px;
   }
   
-  h1, h2, h3 {
+h1 {
+    color: #5288be;
+    text-align: center;
+  }
+
+header {
+    text-align: center;
+  }
+
+  h2, h3 {
     color: #2c3e50;
   }
   
   section {
     margin-bottom: 2rem;
   }
+
   
   ul {
     margin: 0;
@@ -25,7 +36,7 @@ body {
     vertical-align: middle;
   }
   
-  h3 {
+  h4 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -34,7 +45,6 @@ body {
   .tenure {
     margin-left: auto;
     font-style: italic;
-    color: #666;
     white-space: nowrap;
   }
 
@@ -44,17 +54,39 @@ body {
     margin: 1.5em 0 1em;
   }
   
-  .section-divider h2 {
+  .section-divider h4 {
     margin: 0;
     margin-right: 0.5em;
     white-space: nowrap;
     font-size: 1.5em;
+    color: #5288be;
   }
   
   .section-divider .line {
     flex-grow: 1;
     height: 2px;
-    background-color: #ccc;
+    background-color: #5288be;
+  }
+
+  .section-title {
+    font-size: 14px;    
+    color: #5288be;  
+    white-space: nowrap;
+    margin: 0;
+    margin-right: 0.7em;
+  }
+
+  header p.contact-info {
+    margin-bottom: 0.25em; /* less space after contact info */
+  }
+  
+  header p.social-links {
+    margin-top: 0;
+    margin-bottom: 1em; /* keep normal space after social links */
+  }
+  
+  header p.summary {
+    margin-top: 0;
   }
   
 
