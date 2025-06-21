@@ -46,7 +46,10 @@
 
 
   <section>
+  <div class="section-divider">
     <h2>Work Experience</h2>
+    <div class="line"></div>
+    </div>
     {% for job in work %}
     <div>
       <h3>{{ job.position }} — <a href="{{ job.website or '#' }}" target="_blank">{{ job.company }}</a>
@@ -65,7 +68,10 @@
   </section>
 
   <section>
+  <div class="section-divider">
     <h2>Education</h2>
+    <div class="line"></div>
+    </div>
     {% for edu in education %}
     <div>
       <h3>{{ edu.degree }} in {{ edu.area }}
@@ -80,7 +86,10 @@
   </section>
 
   <section>
+  <div class="section-divider">
     <h2>Skills</h2>
+    <div class="line"></div>
+    </div>
     {% for skill_group in skills %}
     <div>
       <h3>{{ skill_group.name }}</h3>
@@ -90,7 +99,10 @@
   </section>
 
   <section>
+  <div class="section-divider">
     <h2>Projects</h2>
+    <div class="line"></div>
+    </div>
     {% for project in projects %}
     <div>
       <h3><a href="{{ project.url }}" target="_blank">{{ project.name }}</a></h3>
@@ -100,7 +112,10 @@
   </section>
 
   <section>
+  <div class="section-divider">
     <h2>Languages</h2>
+    <div class="line"></div>
+    </div>
     <ul>
       {% for lang in languages %}
       <li>{{ lang.language }} — {{ lang.fluency }}</li>

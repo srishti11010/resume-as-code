@@ -37,3 +37,25 @@ body {
     color: #666;
     white-space: nowrap;
   }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5em 0 1em;
+  }
+  
+  .section-divider h2 {
+    margin: 0;
+    margin-right: 0.5em;
+    white-space: nowrap;
+    font-size: 1.5em;
+  }
+  
+  .section-divider .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ccc;
+  }
+  
+
+  

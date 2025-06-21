@@ -69,7 +69,7 @@ poetry run resume-as-code build <input-file> [--output-html file.html] [--output
 ### Example
 
 ```bash
-poetry run resume-as-code build examples/example_resume.yaml --output-html my_resume.html --output-pdf my_resume.pdf
+poetry run resume-as-code build examples/example_resume.yaml --output-html output/my_resume.html --output-pdf output/my_resume.pdf
 ```
 
 ---
@@ -85,6 +85,7 @@ resume-as-code/
 │   ├── models/              # Pydantic models for schema validation
 │   ├── renderer/            # HTML and PDF render logic
 │   └── templates/           # Jinja2 templates for resumes
+├── output/                  # Output (pdf, html)
 ├── tests/                   # Unit tests
 ├── pyproject.toml           # Poetry config
 └── README.md
