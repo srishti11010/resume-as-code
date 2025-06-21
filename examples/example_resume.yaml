@@ -4,11 +4,12 @@ basics:
   phone: "+1 (555) 123-4567"
   website: https://janedoe.dev
   address: 123 Broadway Ave, Apt 5B, New York, NY 10001
-  github: github.com/xyz
-  linkedin: linkedin.com/xyz
+  github: github.com/janedoe
+  linkedin: linkedin.com/in/janedoe
   summary: >
-    Passionate software engineer with 5+ years of experience in full-stack development,
-    specializing in Python and JavaScript.
+    Passionate and detail-oriented full-stack software engineer with over 7 years of experience designing,
+    developing, and deploying scalable web applications. Proven ability to lead engineering teams,
+    optimize workflows, and deliver robust, high-performance solutions using Python, JavaScript, and cloud-native technologies.
 
 work:
   - company: Tech Solutions Inc.
@@ -18,10 +19,12 @@ work:
     endDate: Present
     location: Boston, Massachusetts
     summary: >
-      Leading a team of developers building scalable web applications.
+      Leading a cross-functional team in the design and implementation of enterprise web platforms using modern microservices and DevOps practices.
     highlights:
-      - Developed microservices architecture to improve system reliability.
-      - Implemented CI/CD pipelines reducing deployment time by 30%.
+      - Architected and implemented a scalable microservices ecosystem, reducing system downtime by 40%.
+      - Designed and deployed CI/CD pipelines using GitHub Actions and Docker, decreasing release cycles from weekly to daily.
+      - Mentored junior developers and facilitated code reviews to uphold quality and consistency.
+      - Integrated GraphQL APIs for seamless client-side data queries, improving front-end performance by 25%.
 
   - company: WebWorks
     position: Software Engineer
@@ -29,10 +32,12 @@ work:
     endDate: 2021-05
     location: Boston, Massachusetts
     summary: >
-      Contributed to front-end and back-end web development projects.
+      Played a key role in full-stack development projects across finance and healthcare clients, working with modern front-end frameworks and backend APIs.
     highlights:
-      - Built reusable React components increasing front-end efficiency.
-      - Integrated third-party APIs to enhance user experience.
+      - Developed modular, reusable React components, reducing front-end code duplication by 35%.
+      - Integrated OAuth2-based authentication and third-party APIs, streamlining user onboarding.
+      - Conducted performance audits and implemented lazy loading to improve load times by 20%.
+      - Collaborated with UI/UX designers to enhance accessibility and responsiveness.
 
   - company: ByteForge
     position: Junior Software Developer
@@ -40,25 +45,26 @@ work:
     endDate: 2018-08
     location: Boston, Massachusetts
     summary: >
-      Assisted in building internal tools and maintained legacy systems.
+      Supported internal development teams with enhancements, bug fixes, and system migrations in a legacy codebase.
     highlights:
-      - Wrote unit and integration tests to improve code reliability.
-      - Supported data migration projects during system upgrades.
+      - Wrote over 300 unit and integration tests using PyTest and Jest, raising code coverage to 85%.
+      - Participated in a company-wide legacy-to-modern tech stack migration (PHP to Python/Django).
+      - Created automation scripts for data migration and nightly report generation.
 
 education:
-  - institution: University of California, Berkeley
-    area: Computer Science
-    degree: Bachelor of Science
-    startDate: 2012-09
-    endDate: 2016-06
-    gpa: 3.8
-
   - institution: University of Washington
     area: Computer Science
     degree: Master of Science
     startDate: 2016-09
     endDate: 2018-06
     gpa: 3.9
+
+  - institution: University of California, Berkeley
+    area: Computer Science
+    degree: Bachelor of Science
+    startDate: 2012-09
+    endDate: 2016-06
+    gpa: 3.8
 
 skills:
   - name: Programming Languages
@@ -67,21 +73,50 @@ skills:
       - JavaScript
       - TypeScript
       - SQL
+      - Bash
 
   - name: Frameworks & Tools
     keywords:
       - React
       - Django
-      - Docker
+      - Node.js
+      - Next.js
       - Git
+      - Docker
       - AWS
+      - PostgreSQL
+      - Redis
+
+  - name: DevOps & Testing
+    keywords:
+      - CI/CD
+      - GitHub Actions
+      - PyTest
+      - Selenium
+      - Kubernetes
+      - Terraform
 
 projects:
   - name: Open Source Contributor
     description: >
-      Contributed bug fixes and features to popular open source Python libraries.
+      Regular contributor to several open-source Python libraries including FastAPI, Black, and Typer.
+      Submitted pull requests for performance improvements and documentation enhancements.
     url: https://github.com/janedoe
+
+  - name: Remote Dashboard App
+    description: >
+      Built a real-time dashboard using React, WebSocket, and Flask to monitor cloud server health
+      and application logs across environments.
+    url: https://janedoe.dev/projects/dashboard
+
+  - name: Resume Builder CLI
+    description: >
+      Developed a command-line tool using Python and Jinja2 to generate customizable PDF resumes from YAML/JSON data.
+    url: https://github.com/janedoe/resume-cli
 
 languages:
   - language: English
     fluency: Native
+
+  - language: Spanish
+    fluency: Professional Working Proficiency

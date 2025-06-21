@@ -10,17 +10,27 @@
 
 <body>
 
+{% if basics %}
 <header>
+  {% if basics.name %}
   <h1>{{ basics.name }}</h1>
+  {% endif %}
 
   <div class="contact-info">
+    {% if basics.email %}
     <span><i class="fas fa-envelope icon"></i><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></span>
+    {% endif %}
+    {% if basics.phone %}
     <span>&nbsp; | &nbsp;</span>
     <span><i class="fas fa-phone icon"></i>{{ basics.phone }}</span>
+    {% endif %}
+    {% if basics.address %}
     <span>&nbsp; | &nbsp;</span>
     <span><i class="fas fa-location-dot icon"></i>{{ basics.address }}</span>
+    {% endif %}
   </div>
 
+  {% if basics.website or basics.github or basics.linkedin %}
   <div class="social-links">
     {% if basics.website %}
     <span><i class="fas fa-globe icon"></i><a href="{{ basics.website }}" target="_blank">{{ basics.website }}</a></span>
@@ -34,10 +44,15 @@
     <span><i class="fab fa-linkedin icon"></i><a href="https://{{ basics.linkedin }}" target="_blank">{{ basics.linkedin }}</a></span>
     {% endif %}
   </div>
+  {% endif %}
 
+  {% if basics.summary %}
   <p class="summary">{{ basics.summary }}</p>
+  {% endif %}
 </header>
+{% endif %}
 
+{% if work %}
 <section>
   <div class="section-divider">
     <div class="section-title">Work Experience</div>
@@ -47,13 +62,28 @@
   {% for job in work %}
   <div class="work-entry">
     <div class="entry-header">
+      {% if job.position %}
       <h4 class="entry">{{ job.position }}</h4>
+      {% endif %}
+      {% if job.startDate or job.endDate %}
       <span class="tenure"><em>{{ job.startDate }} - {{ job.endDate or 'Present' }}</em></span>
+      {% endif %}
     </div>
+    {% if job.company or job.location %}
     <div class="entry-details">
-      <a href="{{ job.website or '#' }}" target="_blank">{{ job.company }}</a> — {{ job.location }}
+      {% if job.website %}
+      <a href="{{ job.website }}" target="_blank">{{ job.company }}</a>
+      {% else %}
+      {{ job.company }}
+      {% endif %}
+      {% if job.location %}
+      — {{ job.location }}
+      {% endif %}
     </div>
+    {% endif %}
+    {% if job.summary %}
     <p>{{ job.summary }}</p>
+    {% endif %}
     {% if job.highlights %}
     <ul>
       {% for highlight in job.highlights %}
@@ -64,7 +94,9 @@
   </div>
   {% endfor %}
 </section>
+{% endif %}
 
+{% if education %}
 <section>
   <div class="section-divider">
     <div class="section-title">Education</div>
@@ -74,17 +106,28 @@
   {% for edu in education %}
   <div class="education-entry">
     <div class="entry-header">
-      <h4>{{ edu.degree }} in {{ edu.area }}</h4>
+      {% if edu.degree or edu.area %}
+      <h4>
+        {% if edu.degree %}{{ edu.degree }}{% endif %}
+        {% if edu.area %} in {{ edu.area }}{% endif %}
+      </h4>
+      {% endif %}
+      {% if edu.startDate or edu.endDate %}
       <span class="tenure"><em>{{ edu.startDate }} - {{ edu.endDate }}</em></span>
+      {% endif %}
     </div>
+    {% if edu.institution %}
     <div class="entry-details">{{ edu.institution }}</div>
+    {% endif %}
     {% if edu.gpa %}
     <div class="entry-details">GPA: {{ edu.gpa }}</div>
     {% endif %}
   </div>
   {% endfor %}
 </section>
+{% endif %}
 
+{% if skills %}
 <section>
   <div class="section-divider">
     <div class="section-title">Skills</div>
@@ -93,12 +136,18 @@
 
   {% for skill_group in skills %}
   <div class="skills-entry">
+    {% if skill_group.name %}
     <h4>{{ skill_group.name }}</h4>
+    {% endif %}
+    {% if skill_group.keywords %}
     <p>{{ skill_group.keywords | join(', ') }}</p>
+    {% endif %}
   </div>
   {% endfor %}
 </section>
+{% endif %}
 
+{% if projects %}
 <section>
   <div class="section-divider">
     <div class="section-title">Projects</div>
@@ -107,12 +156,24 @@
 
   {% for project in projects %}
   <div class="project-entry">
-    <h4><a href="{{ project.url }}" target="_blank">{{ project.name }}</a></h4>
+    {% if project.name %}
+    <h4>
+      {% if project.url %}
+      <a href="{{ project.url }}" target="_blank">{{ project.name }}</a>
+      {% else %}
+      {{ project.name }}
+      {% endif %}
+    </h4>
+    {% endif %}
+    {% if project.description %}
     <p>{{ project.description }}</p>
+    {% endif %}
   </div>
   {% endfor %}
 </section>
+{% endif %}
 
+{% if languages %}
 <section>
   <div class="section-divider">
     <div class="section-title">Languages</div>
@@ -121,10 +182,11 @@
 
   <ul>
     {% for lang in languages %}
-    <li>{{ lang.language }} — {{ lang.fluency }}</li>
+    <li>{{ lang.language }}{% if lang.fluency %} — {{ lang.fluency }}{% endif %}</li>
     {% endfor %}
   </ul>
 </section>
+{% endif %}
 
 </body>
 </html>
