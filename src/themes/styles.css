@@ -49,12 +49,13 @@ body {
     margin-right: 0.5em;
     white-space: nowrap;
     font-size: 1.5em;
+    color: #5288be;
   }
   
   .section-divider .line {
     flex-grow: 1;
     height: 2px;
-    background-color: #ccc;
+    background-color: #5288be;
   }
   
 
