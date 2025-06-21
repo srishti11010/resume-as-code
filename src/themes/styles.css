@@ -5,13 +5,23 @@ body {
     padding: 1rem;
   }
   
-  h1, h2, h3 {
+h1 {
+    color: #5288be;
+    text-align: center;
+  }
+
+header {
+    text-align: center;
+  }
+
+  h2, h3 {
     color: #2c3e50;
   }
   
   section {
     margin-bottom: 2rem;
   }
+
   
   ul {
     margin: 0;
@@ -56,6 +66,19 @@ body {
     flex-grow: 1;
     height: 2px;
     background-color: #5288be;
+  }
+
+  header p.contact-info {
+    margin-bottom: 0.25em; /* less space after contact info */
+  }
+  
+  header p.social-links {
+    margin-top: 0;
+    margin-bottom: 1em; /* keep normal space after social links */
+  }
+  
+  header p.summary {
+    margin-top: 0;
   }
   
 

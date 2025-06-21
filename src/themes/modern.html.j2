@@ -11,17 +11,19 @@
 
 <header>
   <h1>{{ basics.name }}</h1>
-  <p><strong>{{ basics.label }}</strong></p>
 
-  <p>
+  <p class="contact-info">
     <i class="fas fa-envelope"></i>
     <a href="mailto:{{ basics.email }}">{{ basics.email }}</a>
     &nbsp; | &nbsp;
     <i class="fas fa-phone"></i>
     {{ basics.phone }}
+    &nbsp; | &nbsp;
+    <i class="fas fa-location-dot"></i>
+    {{ basics.address }}
   </p>
 
-  <p>
+  <p class="social-links">
     <i class="fas fa-globe"></i>
     <a href="{{ basics.website }}" target="_blank">{{ basics.website }}</a>
     {% if basics.github %}
@@ -36,12 +38,7 @@
     {% endif %}
   </p>
 
-  <p>
-    <i class="fas fa-location-dot"></i>
-    {{ basics.address }}
-  </p>
-
-  <p>{{ basics.summary }}</p>
+  <p class="summary">{{ basics.summary }}</p>
 </header>
 
 
