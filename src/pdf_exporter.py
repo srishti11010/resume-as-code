@@ -2,6 +2,9 @@ import os
 import weasyprint
 
 def export_pdf(html_content: str, output_path: str):
+    if not html_content.strip():
+        raise ValueError("HTML content is empty")
+    
     # Load CSS file contents
     css_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'themes', 'styles.css'))
     with open(css_path, 'r') as f:
