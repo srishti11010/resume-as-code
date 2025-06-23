@@ -9,13 +9,20 @@ def parse_resume_file(filepath: str):
         content = f.read()
 
     if ext in ['.yaml', '.yml']:
-        return yaml.safe_load(content)
+        # Error handling for invalid YAML
+        try:
+            return yaml.safe_load(content)
+        except yaml.YAMLError as e:
+            raise ValueError(f"Error parsing YAML file: {e}")
     elif ext == '.json':
-        return json.loads(content)
+        try:
+            return json.loads(content)
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Error parsing JSON file: {e}")
     elif ext == '.md':
         return parse_markdown(content)
     else:
-        raise ValueError(f"Unsupported file format: {ext}")
+        raise ValueError(f"Error: Unsupported file format: {ext}")
 
 def parse_markdown(md_text: str):
     parser = mistune.create_markdown(renderer=mistune.AstRenderer())

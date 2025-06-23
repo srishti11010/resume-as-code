@@ -49,3 +49,24 @@ def test_export_command(runner, tmp_path):
     # Assert the command ran successfully
     assert result.exit_code == 0
     assert "PDF resume saved to output.pdf" in result.output
+
+def test_missing_input_file(runner):
+    # Run the 'build' command with a non-existent input file
+    result = runner.invoke(cli, ["build", "non_existent_file.yaml", "--output-html", "output.html"])
+    
+    # Assert the command failed and an appropriate error message was displayed
+    assert result.exit_code != 0
+    assert "Error: Input file \'non_existent_file.yaml\' not found." in result.output
+
+def test_invalid_file_format(runner, tmp_path):
+    # Create a temporary input file with an unsupported extension
+    input_file = tmp_path / "resume.txt"
+    input_file.write_text("This is not a valid resume format.")
+    
+    # Run the 'build' command
+    result = runner.invoke(cli, ["build", str(input_file), "--output-html", "output.html"])
+
+    # Assert the command failed and an appropriate error message was displayed
+    assert result.exit_code != 0
+    assert "Error: Unsupported file format: .txt" in str(result)
+
