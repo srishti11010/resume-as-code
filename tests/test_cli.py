@@ -49,3 +49,13 @@ def test_export_command(runner, tmp_path):
     # Assert the command ran successfully
     assert result.exit_code == 0
     assert "PDF resume saved to output.pdf" in result.output
+
+def test_missing_input_file(runner):
+    # Run the 'build' command with a non-existent input file
+    result = runner.invoke(cli, ["build", "non_existent_file.yaml", "--output-html", "output.html"])
+    print(result)
+    
+    # Assert the command failed and an appropriate error message was displayed
+    assert result.exit_code != 0
+    assert "Error: Input file \'non_existent_file.yaml\' not found." in result.output
+
