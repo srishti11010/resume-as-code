@@ -74,25 +74,6 @@ poetry run resume-as-code build examples/example_resume.yaml --output-html outpu
 
 ---
 
-## 📁 Project Structure
-
-```
-resume-as-code/
-├── examples/                # Sample YAML/JSON/Markdown resumes
-├── src/
-│   ├── cli.py               # CLI entry point
-│   ├── parser/              # Input parsers (yaml, json, md)
-│   ├── models/              # Pydantic models for schema validation
-│   ├── renderer/            # HTML and PDF render logic
-│   └── templates/           # Jinja2 templates for resumes
-├── output/                  # Output (pdf, html)
-├── tests/                   # Unit tests
-├── pyproject.toml           # Poetry config
-└── README.md
-```
-
----
-
 ## 🧪 Testing
 
 Run tests using:
